@@ -1,0 +1,28 @@
+CREATE TABLE store (id integer primary key, ITEM text, quantity integer, Price integer, Aisle integer);
+
+INSERT INTO STORE VALUES (1, "hat", 3, 10.00, 3);
+INSERT INTO STORE VALUES (2, "shirt", 2, 12.60, 3);
+INSERT INTO STORE VALUES (3, "pants", 1, 15.70, 2);
+INSERT INTO STORE VALUES (4, "scarf", 2, 10.40, 4);
+INSERT INTO STORE VALUES (5, "shoes", 4, 20.40,6);
+INSERT INTO STORE VALUES (6, "bike", 5, 200.00, 7);
+INSERT INTO STORE VALUES (7, "underwear", 1, 13.00, 8);
+INSERT INTO STORE VALUES (8, "SCOOTER", 2, 50.00, 5);
+INSERT INTO STORE VALUES (9, "socks", 3, 20.00,6);
+INSERT INTO STORE VALUES (10, "DOLLS", 5, 9.99, 5);
+INSERT INTO STORE VALUES (11, "KIDS_SHIRT", 10, 6.99, 4);
+INSERT INTO STORE VALUES (12, "MENS_SHIRT", 4, 10.99, 3);
+INSERT INTO STORE VALUES (13, "MENS_PANTS", 2, 13.00, 3);
+SELECT * FROM STORE;
+
+--display the database ordered by price. 
+SELECT * FROM STORE ORDER BY PRICE;
+
+--what is the avg price of items in the store?
+SELECT AVG (PRICE) FROM STORE;
+
+--what is the MAX price of items in the store?
+SELECT MAX (PRICE) FROM STORE;
+
+-- How much does every item cost all together?
+SELECT SUM (PRICE) FROM STORE;
